@@ -236,9 +236,7 @@ async def help(bot, update):
         text=HELP_TEXT,
         disable_web_page_preview=True,
         reply_markup=HELP_BUTTONS,
-        quote=True
-    )
-
+        quote=True )
 
 @Client.on_message(filters.private & filters.command(["about"]))
 async def about(bot, update):
@@ -341,7 +339,6 @@ async def command_filter(bot, update):
 async def text_filter(bot, update):
     text = update.text
     await translate(bot, update, text)
-
 
 @Client.on_message(filters.private & filters.caption)
 async def caption_filter(bot, update):
